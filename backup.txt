@@ -1,0 +1,77 @@
+<!DOCTYPE>
+<html>
+<title>Network Security hw1 </title>
+<head> 
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+ 	<link rel="stylesheet" type="text/css" href='style.css'>
+ 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+</head>
+<body id="bodybg">
+<div class="container">
+	<div>
+		<div>
+			<h2> Homework 1 - Implement RC4 </h2>
+		</div>
+	</div>
+	<table class="table table-condensed">
+		<thead>
+			<th>Encryption</th>
+			<th>Decryption</th>
+		</thead>
+		<tbody>
+			<tr>
+				<td>	<!-- plain text and key for encryption -->
+					<div>
+						<div class="form-div">
+							<form class="form-inline">
+								<div class="form-group">
+									Plain text: <br>
+									<input type="text" class="form-control" id="ptexte">
+									<br>
+								</div>
+								<div>
+									Key: <br>
+									<input type="text" class="form-control" id="keye">
+									<br>
+								</div>
+							</form>
+						</div>
+						<div id="buttons">
+						  <button type="button" class="btn btn-primary">Encrypt</button>
+						</div>
+					</div>
+				</td>
+			
+				<td>
+					<!-- cipher text and key for decryption -->
+					<div>
+						<div class="form-div">
+							<form class="form-inline">
+								<div class="form-group">
+									Ciphertext: <br>
+									<input type="text" class="form-control" id="ptextd">
+									<br>
+								</div>
+								<div>
+									Key: <br>
+									<input type="text" class="form-control" id="keyd">
+									<br>
+								</div>
+							</form>
+						</div>
+						<div id="buttons">
+						  <button type="button" class="btn btn-primary">Decrypt</button>
+						</div>
+					</div>
+				</td>
+			</tr>
+
+		</tbody>
+	</table>
+	
+	
+</div>
+</body>
+</html>

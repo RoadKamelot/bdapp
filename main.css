@@ -1,5 +1,8 @@
 /* style.css file */
-
+.container{
+	padding: 20px;
+	margin: 0 auto;
+}
 h3{
 	color: blue;
 }

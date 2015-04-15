@@ -1,82 +1,16 @@
 <!DOCTYPE html>
-<html ng-app='simpleApp'>
+<html ng-app='bdapp'>
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Angularjs</title>
+	<title>Bear Drone</title>
 	<link rel="stylesheet" type="text/css" href="./main.css">
 	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
 </head>
 <body>
-	<div class="container">
-		<div>
-			<div>
-				<h3> Homework 1 - Implement RC4 </h3>
-			</div>
-		</div>
-		<table class="table table-condensed" ng-controller='rc4Controller'>
-			<thead>
-				<th>Encryption</th>
-				<th>Decryption</th>
-			</thead>
-			<tbody>
-				<tr>
-					<td>	<!-- plain text and key for encryption -->
-						<div>
-							<div class="form-div">
-								<form class="form-inline">
-									<div class="form-group">
-										Plain text: <br>
-										<input type="text" class="form-control" ng-model="ptextEn">
-										<br>
-									</div>
-									<div>
-										Key: <br>
-										<input type="text" class="form-control" ng-model="keyEn">
-										<br>
-									</div>
-								</form>
-							</div>
-							<div id="buttons">
-							  <button type="button" class="btn btn-primary" ng-click='enC(ptextEn, keyEn)'>Encrypt</button>
-							</div>
-						</div>
-						<div>
-							{{encryption}} 
-						</div>
-					</td>
-				
-					<td>
-						<!-- cipher text and key for decryption -->
-						<div>
-							<div class="form-div">
-								<form class="form-inline">
-									<div class="form-group">
-										Ciphertext: <br>
-										<input type="text" class="form-control" ng-model="ptextDe">
-										<br>
-									</div>
-									<div>
-										Key: <br>
-										<input type="text" class="form-control" ng-model="keyDe">
-										<br>
-									</div>
-								</form>
-							</div>
-							<div id="buttons">
-							  <button type="button" class="btn btn-primary" ng-click='deC(ptextDe, keyDe)'>Decrypt</button>
-							</div>
-						</div>
-						<div>
-							{{decryption}} 
-						</div>
-					</td>
-				</tr>
-
-			</tbody>
-		</table>
+	<div class="container" ng-controller="navbarController">
 		
-		
+		<h1> header </h1>
 	</div>	
 
 

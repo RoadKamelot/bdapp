@@ -3,10 +3,10 @@
 <head>
 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-<link rel="stylesheet" type="text/css" href="myStyle.css">
+<link rel="stylesheet" type="text/css" href="./view/myStyle.css">
 <title> Bear Drone 2015 </title>
 </head>
-<body> 
+<body ng-controller="navbarController"> 
 <div class="page-container"> <!-- whole body div-->
 	<div class="border-wrap">
 		<div id="banner">
@@ -18,31 +18,44 @@
 		<div id='nav-wrap' >
 					<span>
 						<img id="logo" src="./pictures/bd2.jpg">
-					</sapn>
+					</span>
 					<span>
 						<img id="teamlogo" src="./pictures/bdtext1.png">
-					<span>
+					</span>
 					
-					<nav class="navbar navbar-inverse navbar-static-top" ng-controller="navbarController">
+					<nav class="navbar navbar-inverse navbar-static-top" >
 			
 				      <ul class="nav navbar-nav">
-				        <li id="home"><a href="#">  <span class="glyphicon glyphicon-home" aria-hidden="true"></span> Home</a></li> 
+				        <li><a href="#/home" ng-click="getStream()">  <span class="glyphicon glyphicon-home" aria-hidden="true"></span> Home</a></li> 
 				        <li> </li>
-				        <li id="projbg"><a href="#"> Background </a></li> 
-				        <li id="test"><a href="#"> How We Test </a></li>
+				        <li><a href="#/background" ng-click='getBackground()'> Background </a></li>  
+				        <li><a href="#/sensors"> Sensors </a></li> 
+				        <li><a href="#/test"> How We Test </a></li>
 				      </ul>
 
 				      <ul class="nav navbar-nav navbar-right">
-				        <li id="team"><a href="#">Team</a></li>
-				        <li id="contacts" ><a href="#">Contacts</a></li>
+				        <li><a href="#/team">Team</a></li>
+				        <li><a href="#/contacts">Contacts</a></li>
 				      </ul>
 			   		 
 					</nav>
 				
 		</div>
+		<div id="main-view">
+			<div ng-view>
+			<!-- different view get injected here -->
+			
+			</div>
+		</div>
 	
 	
 </div> <!-- end container div -->
+<script type='text/javascript' src='https://code.angularjs.org/1.3.9/angular.min.js'></script>
+<script type='text/javascript' src='https://code.angularjs.org/1.3.9/angular-route.js'></script>
+
+<script type='text/javascript' src='backend/app.js'></script>
+<script type='text/javascript' src='controller/controller.js'></script>
+
 </body>
 
 </html>

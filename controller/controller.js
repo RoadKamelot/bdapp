@@ -1,13 +1,26 @@
-var myApp = angular.module('bdapp',[]);
+var bdapp = angular.module('bdapp',['ngRoute']);
 
-myApp.controller('navbarController', ['$scope', function($scope) {
+bdapp.config(appConfig);
 
-$scope.enC = function(text, key){
-	$scope.t1 = 'test1';
-};
- $scope.deC = function(text, key){
-	$scope.t2 = 'test2';
-};
+bdapp.controller('navbarController', ['$scope', function($scope) {
+
+$scope.getStream = function() {
+		$scope.msg = "This is a stream";
+	};
 
 }]);
 
+function appConfig($routeProvider){
+	$routeProvider.when('/home',{
+		templateUrl: '/view/datastream.html',
+		controller: 'navbarController'
+	}).when('/background', {
+		templateUrl: '/view/background.html',
+		controller: 'navbarController'
+	}).when('/background', {
+		templateUrl: '/view/background.html',
+		controller: 'navbarController'
+	});
+}
+
+//https://scotch.io/tutorials/single-page-apps-with-angularjs-routing-and-templating

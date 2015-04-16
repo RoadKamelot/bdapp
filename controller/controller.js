@@ -11,7 +11,10 @@ $scope.getStream = function() {
 }]);
 
 function appConfig($routeProvider){
-	$routeProvider.when('/home',{
+	$routeProvider.when('/',{
+		templateUrl: '/view/datastream.html',
+		controller: 'navbarController'
+	}).when('/home',{
 		templateUrl: '/view/datastream.html',
 		controller: 'navbarController'
 	}).when('/background', {
@@ -23,4 +26,3 @@ function appConfig($routeProvider){
 	});
 }
 
-//https://scotch.io/tutorials/single-page-apps-with-angularjs-routing-and-templating

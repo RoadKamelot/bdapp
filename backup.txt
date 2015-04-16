@@ -8,7 +8,6 @@
 </head>
 <body ng-controller="navbarController"> 
 <div class="page-container"> <!-- whole body div-->
-
 	<div class="border-wrap">
 		<div id="banner">
 

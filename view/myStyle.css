@@ -3,7 +3,8 @@ h2{
 	color: black;
 }
 h3{
-	padding-left: 30px;
+	font-family: Georgia;
+	padding-left: 10px;
 }
 .border-wrap{
 	border:1px solid white;
@@ -49,7 +50,8 @@ filter:alpha(opacity=60); /* For IE8 and earlier */
 .sensor-sect{
 	margin: 0 auto;
 	padding: 20px;
-	color: #CCCCCC;
+	background-color: #CCCCCC;
+	opacity: 0.9;
 }
 .data{
 	margin: 0 auto;
@@ -59,7 +61,21 @@ filter:alpha(opacity=60); /* For IE8 and earlier */
 
 	
 }
-.paragraph{
+.bg-div{
+	background-color: #cccccc;
 	margin: 0 auto;
-	padding: 30px;
+	opacity: 0.7;
+	padding: 10px;
+}
+#main-view{
+	background-image:url('../pictures/cswall.jpg');
+	background-position: center center;
+	background-size:cover;
+	background-color: #464646;
+}
+
+.paragraph{
+	font-size: 15px;
+	margin: 0 auto;
+	padding: 10px;
 }

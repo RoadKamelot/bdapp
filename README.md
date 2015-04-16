@@ -1,2 +1,4 @@
 # bdapp
-simple app to perform rc4 encryption and decryption.
+
+Web app for Senior proj.
+Bear Drone team.

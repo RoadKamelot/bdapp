@@ -1,16 +1,20 @@
-
+/* myStyle.css
+	@author: Kon Nguyen
+*/
+/************************************* index.html *****************/
+body{
+	padding:3%;
+	background-image:url('../pictures/cswall.jpg');
+	background-position: center center;
+	background-size:cover;
+	background-color: #464646;
+}
 h2{
 	color: black;
 }
-h3{
-	font-family: Georgia;
-	padding-left: 10px;
-}
-.border-wrap{
-	border:1px solid white;
-	background: white;
-	padding:2px;
-	border-radius: 20px;
+
+.banner-wrap{
+	padding:1%;
 }
 #banner{
 	width:100%;
@@ -47,12 +51,7 @@ filter:alpha(opacity=60); /* For IE8 and earlier */
 .navbar-right{
 	margin-right: 20px;
 }
-.sensor-sect{
-	margin: 0 auto;
-	padding: 20px;
-	background-color: #CCCCCC;
-	opacity: 0.9;
-}
+
 .data{
 	margin: 0 auto;
 	padding: 10px;
@@ -61,21 +60,44 @@ filter:alpha(opacity=60); /* For IE8 and earlier */
 
 	
 }
-.bg-div{
-	background-color: #cccccc;
-	margin: 0 auto;
-	opacity: 0.7;
-	padding: 10px;
+.sticky-footer{
+	margin: 0;
+	padding: 5px;
+	background-color: #282828;
 }
-#main-view{
-	background-image:url('../pictures/cswall.jpg');
-	background-position: center center;
-	background-size:cover;
-	background-color: #464646;
+.sticky-footer div{
+	text-align: center;
+	color: #a9a9a9;
+	font-family: verdana;
 }
-
-.paragraph{
+/*************************** Background *************************/
+h3{
+	font-family: Georgia;
+	padding-left: 10px;
+}
+.section{
+	background-color: #585858;
+	padding: 20px;
+	margin: 10px;
+	opacity: 0.9;
+	margin: 1% auto;
+}
+.bg-paragraph{
 	font-size: 15px;
 	margin: 0 auto;
 	padding: 10px;
+	font-family: verdana;
+	color: #202020;
 }
+/*************************** Sensor *************************/
+.sensor-sect{
+	margin: 0 auto;
+	padding: 20px;
+	background-color: #CCCCCC;
+	opacity: 0.9;
+}
+/*************************** Test *************************/
+/*************************** Team *************************/
+/*************************** Contacts *************************/
+
+

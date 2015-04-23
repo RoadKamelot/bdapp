@@ -20,8 +20,17 @@ function appConfig($routeProvider){
 	}).when('/background', {
 		templateUrl: '/view/background.html',
 		controller: 'navbarController'
-	}).when('/background', {
-		templateUrl: '/view/background.html',
+	}).when('/sensors', {
+		templateUrl: '/view/sensors.html',
+		controller: 'navbarController'
+	}).when('/team', {
+		templateUrl: '/view/team.html',
+		controller: 'navbarController'
+	}).when('/contacts', {
+		templateUrl: '/view/contacts.html',
+		controller: 'navbarController'
+	}).when('/test', {
+		templateUrl: '/view/test.html',
 		controller: 'navbarController'
 	});
 }

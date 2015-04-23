@@ -10,7 +10,7 @@ app.use(express.static(__dirname+'/'));
 app.set('port', (process.env.PORT || 8080))
 
 app.get('/', function(req, res) {
-    res.sendFile(path.join(__dirname + '/view/index.html'));
+    res.sendFile(path.join(__dirname + '/view/index.html')); // single dot: go down one, .. means get out one up
 });
 
 app.listen(app.get('port'), function() {

@@ -1,0 +1,23 @@
+{
+  "name": "bdapp",
+  "version": "1.0.0",
+  "description": "Web app for Senior proj.\r Bear Drone team.",
+  "main": "app.js",
+  "dependencies": {
+    "express": "^4.12.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://knguyen6@github.com/knguyen6/bdapp.git"
+  },
+  "author": "KN",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/knguyen6/bdapp/issues"
+  },
+  "homepage": "https://github.com/knguyen6/bdapp"
+}

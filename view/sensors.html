@@ -8,7 +8,65 @@
 </head>
 <body>
 	<div class="container">
-		<h2> Sensors' info go here -> </h2>
+	<section class="container section">
+			<h3>Drone</h3>
+			<div class="picture-div">
+				<img src="">
+			</div>
+			<div class="bg-paragraph">
+				Drone was provided by the customer.
+			</div>
+		</section>
+		<section class="container section">
+			<h3>Temperature</h3>
+			<div class="picture-div">
+				<img src="">
+			</div>
+			<div class="bg-paragraph">
+				Collect current temperature.
+			</div>
+		</section>
+		<section class="container section">
+			<h3>Pitot Tube - Pressure Sensor</h3>
+			<div class="picture-div">
+				<img src="">
+			</div>
+			<div class="bg-paragraph">
+				The use of a change in pressure due to wind compared with a static pressure to give an offset output in a voltage. This would need to be pointed in the direction of the wind to be able to get the correct magnitude and it is still unsure if it is just off a bit whether it would see the same result as being directly in the breeze. It has a very small form factor (see right, only a few inches long).
+
+			</div>
+		</section>
+		<section class="container section">
+			<h3>Gyroscope</h3>
+			<div class="picture-div">
+				<img src="">
+			</div>
+			<div class="bg-paragraph">
+				Using the tilt of platform, we could ascertain the direction that the platform is being pushed. After testing a Gyroscope we determined that it only provided delta x, y, z when change is felt so if no change happens then it will display a zero which means that if the platform is tilting for a period of time than it will just be responding with zero. 
+
+			</div>
+		</section>
+		<section class="container section">
+			<h3>Compass</h3>
+			<div class="picture-div">
+				<img src="">
+			</div>
+			<div class="bg-paragraph">
+				By adding an electronic compass to the tail of a wind vane we could get the direction in which the wind was pushing the fin. This would allow us to get the direction from the wind but it would require us to use a vane of some variety to attach the compass to so that the wind could move it. We would also require that vane to be able to move in a 360 degree plane without causing any related problems to occur.
+			</div>	
+			
+		</section>
+		<section class="container section">
+			<h3>XBee - Transmit wind information to base</h3>
+			<div class="picture-div">
+				<img src="">
+			</div>
+			<div class="bg-paragraph">
+				Using a 900Mhz frequency radio, we can use the Xbee protocols to pass packets of information from the sensors to the ground station so long as the drone and the base station have line of sight as well as are within 1-1.5km from each other.
+			</div>	
+			
+		</section>
 	</div>
+
 </body>
 </html>

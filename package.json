@@ -4,7 +4,8 @@
   "description": "Web app for Senior proj.\r Bear Drone team.",
   "main": "app.js",
   "dependencies": {
-    "express": "^4.12.3"
+    "express": "^4.12.3",
+    "mysql": "^2.6.2"
   },
   "devDependencies": {},
   "scripts": {

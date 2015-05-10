@@ -2,11 +2,20 @@ var bdapp = angular.module('bdapp',['ngRoute']);
 
 bdapp.config(appConfig);
 
-bdapp.controller('navbarController', ['$scope', function($scope) {
-
-$scope.getStream = function() {
-		$scope.msg = "This is a stream";
-	};
+bdapp.controller('navbarController', ['$scope', '$http', '$interval', function($scope, $http, $interval) {
+	// getTemp();
+	// $interval(function(){
+	// 	getTemp();
+	// },300);
+	$scope.getTemp = function(){
+		// function getTemp(){
+		//$scope.temp_data = "70F buddy";
+		$http.get('/temp').success(function(data){
+			$scope.temp_data = data;
+		}).error(function(){
+			console.log("Error while getting data from app.js to controller");
+		});
+	}
 
 }]);
 

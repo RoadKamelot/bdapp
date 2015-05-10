@@ -3,7 +3,7 @@
 	4/13/15 */
 var express = require('express'),
 	path = require('path'),
-	bodyParser = require('body-parser'),
+	_lodash = require('lodash'),
 	dronedbAccessor = require('./dronedbAccessor'),
 	app = express();
 
@@ -16,7 +16,12 @@ app.get('/', function(req, res) {
     res.sendFile(path.join(__dirname + '/view/index.html')); // single dot: go down one, .. means get out one up
 });
 
-
+app.get('/temp', function(req, res){
+	console.log('IN HERE');
+	dronedbAccessor.temperatureData('1', function(err, result){
+		return result ? res.send(result):res.send(err);
+	});
+});
 
 
 

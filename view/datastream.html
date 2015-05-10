@@ -9,8 +9,14 @@
 	<div class="container">
 		<hr>
 		<section class="sensor-sect">
-			<h2> Data from <strong>Temperature</strong> sensor -> </h2>
-			<div class="data">Coming soon ...</div>
+			<h2> Data from <strong>Temperature</strong> sensor</h2>
+			<div class="data">
+				<div ng-repeat="data in temp_data"> {{data.SEN_CALC}} 
+				</div>
+				<div> 
+					<button class='btn btn-primary' ng-click="getTemp()">Display Data</button>
+				</div>
+			</div>
 		</section>
 		<hr>
 		<section class="sensor-sect">

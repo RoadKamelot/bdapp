@@ -71,9 +71,7 @@ filter:alpha(opacity=60); /* For IE8 and earlier */
 	color: #666699;
 	
 }
-table, th, td{
-	border: 2px;
-	border-collapse: collapse;
+#data-table{
 	width: 90%;
 	background-color: white;
 	margin: 0 auto;

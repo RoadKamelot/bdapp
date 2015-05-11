@@ -8,10 +8,10 @@ var mysql = require('mysql');
 	var dbconfig = {
 		connectionLimit: 100,
 		debug: false,
-		host: process.env.DB_URL,
-		user: process.env.USER,
-		password: process.env.PASSWORD,
-		database: process.env.DB
+		host: process.env.DB_URL || 'us-cdbr-azure-west-b.cleardb.com',
+		user: process.env.USER || 'b58dc498c64f9a',
+		password: process.env.PASSWORD || '7ab3b404',
+		database: process.env.DB || 'dronedb'
 
 	};
 
@@ -27,7 +27,13 @@ var mysql = require('mysql');
 			else {
 				//time sort desc, get 5
 				connection.query("select sen_calc.TIME_ID, sen_time.SEN_ID, sen_calc.SEN_CALC from sen_calc, sen_time where sen_time.ID = sen_calc.TIME_ID and sen_time.SEN_ID=? order by sen_time.ID desc limit 10",data, function(query_err, result){
+				// connection.query("select sen_calc.TIME_ID, 
+				// 	sen_time.SEN_ID, sen_calc.SEN_CALC from sen_calc, 
+				// 	sen_time where sen_time.ID = sen_calc.TIME_ID and sen_time.SEN_ID=? order by sen_time.ID desc limit 10",
+				// 	data, function(query_err, result){
+
 					connection.release();
+
 					if(query_err){
 						console.log(query_err);
 						return callback(query_err, null);

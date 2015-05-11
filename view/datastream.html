@@ -9,13 +9,16 @@
 		<table id="data-table">
 			<tr>
 				<th>Time</th>
-				<th>Temperature</th>
-				<th>Presure Sensor</th>
+				<th>Sensor ID</th>
+				<th>Sensor Data</th>
 				<th>Accelerometer</th>
 				<th>Magnetometer</th>
 			</tr>
-			<tr>
-			{{temp_data}}
+			<tr ng-repeat="data in temp_data">
+				<td>{{data.TIME_ID}}</td>
+				<td>{{data.SEN_ID}}</td>
+				<td>{{data.SEN_CALC}}</td>
+				
 			</tr>
 		</table>
 		<hr>

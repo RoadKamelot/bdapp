@@ -1,3 +1,4 @@
+(function() {
 var bdapp = angular.module('bdapp',['ngRoute']);
 
 bdapp.config(appConfig);
@@ -44,3 +45,4 @@ function appConfig($routeProvider){
 	});
 }
 
+})();

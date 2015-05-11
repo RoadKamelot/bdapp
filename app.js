@@ -3,7 +3,6 @@
 	4/13/15 */
 var express = require('express'),
 	path = require('path'),
-	_lodash = require('lodash'),
 	dronedbAccessor = require('./dronedbAccessor'),
 	app = express();
 

@@ -3,37 +3,25 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Data Stream</title>
 </head>
-<body id="datastream-bg">
-	<div class="container">
+<body>
+	<div>
+		<table id="data-table">
+			<tr>
+				<th>Time</th>
+				<th>Temperature</th>
+				<th>Presure Sensor</th>
+				<th>Accelerometer</th>
+				<th>Magnetometer</th>
+			</tr>
+			<tr>
+
+			</tr>
+		</table>
 		<hr>
-		<section class="sensor-sect">
-			<h2> Data from <strong>Temperature</strong> sensor</h2>
-			<div class="data">
-				<div ng-repeat="data in temp_data"> {{data.SEN_CALC}} 
-				</div>
-				<div> 
-					<button class='btn btn-primary' ng-click="getTemp()">Display Data</button>
-				</div>
-			</div>
-		</section>
-		<hr>
-		<section class="sensor-sect">
-			<h2> Data from <strong>Pressure</strong> sensor -> </h2>
-			<div class="data">Coming soon ...</div>
-		</section>
-		<hr>
-		<section class="sensor-sect">
-			<h2> Data from <strong>Accelerometer</strong> -> </h2>
-			<div class="data">Coming soon ...</div>
-		</section>
-		<hr>
-		<section class="sensor-sect">
-			<h2> Data from <strong>Magnetometer</strong> -> </h2>
-			<div class="data">Coming soon ...</div>
-		</section>
-		<hr>
+		<div class="container">
+			<button class="btn btn-primary" ng-click="getTemp()">Get Data</button>
+		</div>
 	</div>
 </body>
 </html>

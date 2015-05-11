@@ -8,10 +8,10 @@ var mysql = require('mysql');
 	var dbconfig = {
 		connectionLimit: 100,
 		debug: false,
-		host: 'us-cdbr-azure-west-b.cleardb.com',
-		user: 'b58dc498c64f9a',
-		password: '7ab3b404',
-		database: 'dronedb'
+		host: process.env.DB_URL,
+		user: process.env.USER,
+		password: process.env.PASSWORD,
+		database: process.env.DB
 
 	};
 

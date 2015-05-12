@@ -10,7 +10,7 @@ var mysql = require('mysql');
 		debug: false,
 		host: process.env.DB_URL,
 		user: process.env.USER,
-		password: process.env.PASSWORD,
+		password: process.env.PASSWORD ,
 		database: process.env.DB
 
 	};

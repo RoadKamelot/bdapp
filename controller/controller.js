@@ -3,21 +3,21 @@ var bdapp = angular.module('bdapp',['ngRoute']);
 
 bdapp.config(appConfig);
 
-bdapp.controller('navbarController', ['$scope', '$http', '$interval', function($scope, $http, $interval) {
+bdapp.controller('navbarController', ['$scope', '$http', '$interval', '$filter',function($scope, $http, $interval,$filter) {
 	// getTemp();
 	// $interval(function(){
 	// 	getTemp();
 	// },300);
 	$scope.getTemp = function(){
-		// function getTemp(){
-		//$scope.temp_data = "70F buddy";
-		$http.get('/temp').success(function(data){
+		$http.get('/temp').success(function(data){	
+
 			$scope.temp_data = data;
+
 		}).error(function(){
 			console.log("Error while getting data from app.js to controller");
 		});
 	}
-
+	
 }]);
 
 function appConfig($routeProvider){

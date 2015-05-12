@@ -80,9 +80,10 @@ h3{
 
 .section{
 	background-color: #585858;
+	color: black;
 	padding: 5px;
 	margin: 10px;
-	opacity: 0.9;
+	opacity: 0.95;
 	margin: 1% auto;
 }
 .bg-paragraph{
@@ -98,6 +99,20 @@ h3{
 	padding: 20px;
 	background-color: #CCCCCC;
 	opacity: 0.9;
+}
+.picture-div{
+	width: 30%;
+	margin:0 auto;
+	padding-bottom: 5px;
+	float: right;
+}
+#pic{
+	width: 60%;
+	height: 30%;
+}
+#sensor-p{
+	margin:0 auto;
+	padding-top: 10px;
 }
 /*************************** Test *************************/
 /*************************** Team *************************/

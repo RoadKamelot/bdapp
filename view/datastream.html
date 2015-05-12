@@ -5,21 +5,34 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 </head>
 <body>
-	<div class="table-responsive table-div">
+	<div class="container table-responsive table-div">
 		<table class="table table-hover">
 			<tr class="danger">
 				<th>Time</th>
-				<th>Sensor ID</th>
-				<th>Sensor Data</th>
-				<th>Accelerometer</th>
-				<th>Magnetometer</th>
+				<th>Temperature (Celsius)</th>
+				<!-- <th>Time</th> -->
+				<th>Windspeed (m/s) </th>				
+				<!-- <th>Time</th> -->
+				<th>Direction (Degree from N)</th>
+
 			</tr>
-			<tr ng-repeat="data in temp_data" class="active">
-				<td>{{data.TIME_ID}}</td>
-				<td>{{data.SEN_ID}}</td>
-				<td>{{data.SEN_CALC}}</td>
-				
+			<!-- <tr  ng-repeat="data in temp_data" class="active">
+				<td>{{data.SEN_TIME}}</td> 
+				<td>{{data.Celsius[$index].SEN_CALC}}</td>
+				<td>{{data['Meters per second'][$index].SEN_CALC}}</td>
+				<td>{{data.degrees[$index].SEN_CALC}}</td>
+			</tr> -->
+
+			<tr  ng-repeat="data in temp_data" class="active">
+				<td>{{data.Time_Speed}}</td> 
+				<td>{{data.Temp}}</td>
+				<!-- <td>{{data.Time_Speed}}</td>  -->
+				<td>{{data.Speed}}</td>
+				<!-- <td>{{data.Time_Direction}}</td>  -->
+				<td>{{data.Direction}}</td>
 			</tr>
+
+
 		</table>
 		<hr>
 		<div class="container">

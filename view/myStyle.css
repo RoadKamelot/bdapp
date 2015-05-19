@@ -79,11 +79,12 @@ h3{
 }
 
 .section{
-	background-color: #585858;
+	/*background-color: #585858;*/
+	background-color: #DDDDDC;
 	color: black;
-	padding: 5px;
+	/*padding: 5px;*/
 	margin: 10px;
-	opacity: 0.95;
+	opacity: 0.9;
 	margin: 1% auto;
 }
 .bg-paragraph{
@@ -115,6 +116,10 @@ h3{
 	padding-top: 10px;
 }
 /*************************** Test *************************/
+.vid-div{
+	margin: 0 auto;
+	padding: 10px;
+}
 /*************************** Team *************************/
 /*************************** Contacts *************************/
 

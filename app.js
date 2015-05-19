@@ -23,11 +23,9 @@ app.get('/temp', function(req, res){
 		for (var i = 0; i < groupbyUnits.degrees.length;i++){
 			// console.log(groupbyUnits.Celsius[i]);
 			var data = {
-				Time_Temp: groupbyUnits.Celsius[i] ? groupbyUnits.Celsius[i].SEN_TIME : 'N/A',
-				Temp: 'N/A',//groupbyUnits.Celsius[i] ? groupbyUnits.Celsius[i].SEN_CALC : 'N/A',
-				Time_Speed: groupbyUnits['Meters per second'][i].SEN_TIME,
+				Time: groupbyUnits.Celsius[i].SEN_TIME,
+				Temp: groupbyUnits.Celsius[i].SEN_CALC,
 				Speed: groupbyUnits['Meters per second'][i].SEN_CALC,
-				Time_Direction: groupbyUnits.degrees[i].SEN_TIME,
 				Direction: groupbyUnits.degrees[i].SEN_CALC
 			};
 				final_result.push(data);

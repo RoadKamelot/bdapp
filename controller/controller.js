@@ -1,20 +1,17 @@
-(function() {
+
 var bdapp = angular.module('bdapp',['ngRoute']);
 
 bdapp.config(appConfig);
 
-bdapp.controller('navbarController', ['$scope', '$http', '$interval', '$filter',function($scope, $http, $interval,$filter) {
-	// getTemp();
+bdapp.controller('navbarController', ['$scope', '$http', '$interval',function($scope, $http, $interval) {
 	// $interval(function(){
 	// 	getTemp();
 	// },300);
 	$scope.getTemp = function(){
-		$http.get('/temp', {cache: 'true'}).success(function(data){	
-
+		$http.get('/temp').success(function(data){	
 			$scope.temp_data = data;
-
 		}).error(function(){
-			console.log("Error while getting data from app.js to controller, cant let /temp from http in dronedbAccessor");
+			console.log("Error while getting data from app.js to controller, cant get /temp from http in dronedbAccessor");
 		});
 	}
 	
@@ -43,6 +40,4 @@ function appConfig($routeProvider){
 		templateUrl: '/view/test.html',
 		controller: 'navbarController'
 	});
-}
-
-})();
+};

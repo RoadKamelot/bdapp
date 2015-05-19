@@ -10,7 +10,7 @@ var mysql = require('mysql');
 		debug: false,
 		host: process.env.DB_URL,
 		user: process.env.USER,
-		password: process.env.PASSWORD ,
+		password: process.env.PASSWORD,
 		database: process.env.DB
 
 	};
@@ -26,7 +26,7 @@ var mysql = require('mysql');
 			}
 			else {
 				//time sort desc, get 20
-				connection.query("select sen_time.SEN_TIME, sen_calc.SEN_CALC , sen_calc.Units from sen_calc, sen_time where sen_time.ID = sen_calc.TIME_ID and (now() - sen_calc.SEN_TIME)>5 order by sen_time.SEN_TIME DESC", function(query_err, result){
+				connection.query("select sen_time.SEN_TIME, sen_calc.SEN_CALC , sen_calc.Units from sen_calc, sen_time where sen_time.ID = sen_calc.TIME_ID and (now() - sen_calc.SEN_TIME)>3 order by sen_time.SEN_TIME ASC", function(query_err, result){
 					connection.release();
 
 					if(query_err){
@@ -46,7 +46,6 @@ var mysql = require('mysql');
 	}
 	
 	
-
 	/** Handling error in connection with database **/
 	function checkSQLConnection(err, connection){
 		if (err) {

@@ -9,10 +9,9 @@ var mysql = require('mysql');
 		connectionLimit: 100,
 		debug: false,
 		host: process.env.DB_URL,
-		user: process.env.USER,
-		password: process.env.PASSWORD,
+		user: process.env.USER ,
+		password: process.env.PASSWORD ,
 		database: process.env.DB
-
 	};
 
 	var pool = mysql.createPool(dbconfig);

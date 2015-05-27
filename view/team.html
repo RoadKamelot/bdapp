@@ -4,40 +4,47 @@
 	<title>Team</title>
 </head>
 <body class="container-fluid">
-<div class="section">
-		<div>
+<div class="container section">
+		<div class='table-responsive'>
 			<h3> Sponsors & Advisors</h3>
-			<p>
-				Orlando Baiocchi (University of Washington, Tacoma)
-			</p>
-			<p>
-				Bob Landowski (University of Washington, Tacoma)
-			</p>
-		</div>
-		<div>
-			<h3> Computer Engineer and Systems - Senior Project's team 2015</h3>
 			<table class="table">
-			<tr>
-				<td>
-					<h4>Chris Barrett</h4>
-				</td>
-				<td>
-					<h4>Eric Yee</h4>
-				</td>
-				<td>
-					<h4>Khanh Nguyen</h4>
-					<a href="https://www.linkedin.com/pub/khanh-nguyen/8b/1b1/407">     
-		          		<img src="https://static.licdn.com/scds/common/u/img/webpromo/btn_viewmy_160x33.png" width="160" height="33" border="0" alt="View Khanh Nguyen's profile on LinkedIn"> 
-		   			 </a>
-				</td>
-				<td>
-					<h4>Brendan Crawford</h4>
-				</td>
-			</tr>
+				<tr>
+					<td ng-repeat="sponsor in sponsors">
+						<img class="pic" src="{{sponsor.icon}}">
+						<p class="bg-paragraph">
+						{{sponsor.name}} - {{sponsor.role}}
+						<a href="{{sponsor.url}}">{{sponsor.url}}</a>
+						</p>
+					</td>
+				</tr>
 			</table>
 		</div>
+		<div class='table-responsive'>
+			<h3> Computer Engineer and Systems - Senior Project's team 2015</h3>
+				<table class="table">
+					<tr>
+						<td ng-repeat="member in members">
+				          	<div class="picture-div">
+				          		<img class="pic" src='{{ member.icon}}'>
+				          		<p class="bg-paragraph">{{member.name}}
+				          			<br>
+				          			{{member.major}}</p>
+				          		<a href='{{member.linkedin}}'><img src='./pictures/linkedin.png'></a>
+				          	</div>
+				      
+				          		
+				        </td>
+					</tr>
+				</table>
+			
+		</div>
 	
-	
+		<div>
+			<h3>Special Thanks: </h3>
+			<p class="bg-paragraph"> <strong>
+				We would like to thank the great crew of the UWAL Kirsten Wind Tunnel for helping to provide us a way to accurately test our pressure sensor and providing us a unique experience. We would also like to thank our Customer the SENSE Research Group for providing us a unique challenge and to allow us to help with their research. Finally we would like to thank our Advisor Bob Landowski for providing us Students with solid support whenever we needed it and sometimes when we didn’t know we needed it. </strong>
+			</p>
+		</div>
 		
     </div>
 </body>

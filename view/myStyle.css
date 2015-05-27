@@ -8,6 +8,7 @@
 	background-position: center center;
 	background-size:cover;
 	background-color: #464646;
+
 }
 h2{
 	color: black;
@@ -26,8 +27,8 @@ h2{
 }
 #team-banner{
 	margin: 0 auto;
-  background-color: #ffffff;
-  opacity:0.6;
+  	background-color: #ffffff;
+  	opacity:0.6;
 filter:alpha(opacity=60); /* For IE8 and earlier */
 }
 #team-banner div{
@@ -76,6 +77,7 @@ filter:alpha(opacity=60); /* For IE8 and earlier */
 h3{
 	font-family: Georgia;
 	padding-left: 10px;
+	color: #6633CC;
 }
 
 .section{
@@ -97,19 +99,18 @@ h3{
 /*************************** Sensor *************************/
 .sensor-sect{
 	margin: 0 auto;
-	padding: 20px;
+	padding: 1%px;
 	background-color: #CCCCCC;
 	opacity: 0.9;
 }
 .picture-div{
-	width: 30%;
 	margin:0 auto;
-	padding-bottom: 5px;
+	padding: 1%;
 	float: right;
+	overflow: hidden;
 }
-#pic{
-	width: 60%;
-	height: 30%;
+.pic{
+	border-radius: 30px;
 }
 #sensor-p{
 	margin:0 auto;
@@ -120,7 +121,11 @@ h3{
 	margin: 0 auto;
 	padding: 10px;
 }
+.color-header{
+	color: #6633CC;
+}
 /*************************** Team *************************/
+
 /*************************** Contacts *************************/
 
 

@@ -10,8 +10,12 @@ bdapp.controller('navbarController', ['$scope', '$http', '$interval',function($s
 	$scope.getTemp = function(){
 		$http.get('/temp').success(function(data){	
 			$scope.temp_data = data;
-		}).error(function(err){
+		}).error(function(data, status, headers, err){
+			console.log(data);
+			console.log(status);
+			console.log(headers);
 			console.log(err);
+
 			console.log("Error while getting data from app.js to controller, cant get /temp from http in dronedbAccessor");
 		});
 	};

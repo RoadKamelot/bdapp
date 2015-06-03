@@ -2,7 +2,10 @@
 	@author: Kon Nguyen
 */
 /************************************* index.html *****************/
-
+body{
+	padding-bottom: 15px;
+	background-color: #DDDDDC;
+}
 #index-body{
 	background-image:url('../parallax/images/uwtbldg.jpg');
 	background-position: center center;
@@ -93,7 +96,6 @@ h3{
 	background-color: #DDDDDC;
 	color: black;
 	/*padding: 5px;*/
-	margin: 10px;
 	opacity: 0.9;
 	margin: 1% auto;
 }
@@ -128,10 +130,16 @@ h3{
 .vid-div{
 	margin: 0 auto;
 	padding: 10px;
+	text-align: center;
 }
 .color-header{
 	color: #6633CC;
 }
+.graph{
+	max-width: 100%;
+	max-height: 100%;
+}
+
 /*************************** Team *************************/
 
 /*************************** Contacts *************************/

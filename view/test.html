@@ -4,27 +4,23 @@
 	<title>Testing</title>
 </head>
 <body>
-	<div class="container-fluid">
-		<section class="container section">
-			<h3>Moderate Calibration Tests</h3>
-			<hr align='left' width='25%'>
-			<div>
-				Testing Videos and Results here.
-				<div class="vid-div">
-					<iframe width="560" height="315" src="https://www.youtube.com/embed/_yFUluV6JVw" frameborder="0" allowfullscreen></iframe>
-
-				</div>
-				
-			</div>
-		</section>
-		<section class="container section">
-			<h3>Wind Tunnel Tests</h3>
-			<hr align='left' width='25%'>
+	<div class="container container-fluid">
+		
+		<section class="section" ng-repeat="test in tests">
+			<div class="bg-paragraph"><h3>{{test.header}}</h3></div>
 			<div class="bg-paragraph">
-				Testing Videos here from Wind Tunnel.
+				<div>{{test.description}}</div>
+				<div><h4>Plan: </h4>{{test.plan}}</div>
+				<div><h4>Expectations:</h4> {{test.expectation}}</div>
+				<div><h4>Results:</h4> {{test.result}}</div>
 			</div>
+			<div><img class="graph" src='{{test.graph}}'></div>
+		</section>
+		<section class="section" ng-repeat="graph in windtunnels">
+			<div class="vid-div"><h4>{{graph.title}}</h4></div>
+			<div class="vid-div"><img class="graph" src='{{graph.graph}}'></div>
 		</section>
 		
 	</div>
 </body>
-</html>
+</html> 

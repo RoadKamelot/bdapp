@@ -2,9 +2,9 @@
 	@author: Kon Nguyen
 */
 /************************************* index.html *****************/
+
 #index-body{
-	padding:1%;
-	background-image:url('../pictures/cswall.jpg');
+	background-image:url('../parallax/images/uwtbldg.jpg');
 	background-position: center center;
 	background-size:cover;
 	background-color: #464646;
@@ -14,9 +14,6 @@ h2{
 	color: black;
 }
 
-.banner-wrap{
-	padding:1%;
-}
 #banner{
 	width:100%;
 	height:200px;
@@ -63,14 +60,25 @@ filter:alpha(opacity=60); /* For IE8 and earlier */
 	color: #a9a9a9;
 	font-family: verdana;
 }
+#main-view{
+	/*border: 2px solid red;*/
+	min-height: 600px;
 
+}
 /***************************** Datastream *************************/
 .table-div{
 	margin: 0 auto;
 	padding: 5px;
 	color: #666699;
 	opacity: 0.7;
-	
+	height: 650px;
+
+}
+table{
+	height: 800px;
+}
+#table-body{
+	overflow-y: scroll;
 }
 
 /*************************** Background *************************/

@@ -25,7 +25,7 @@ var mysql = require('mysql');
 			}
 			else {
 				//time sort desc, get 20
-				connection.query("select sen_time.SEN_TIME, sen_calc.SEN_CALC , sen_calc.Units from sen_calc, sen_time where sen_time.ID = sen_calc.TIME_ID and (now() - sen_calc.SEN_TIME)>3 order by sen_time.SEN_TIME ASC", function(query_err, result){
+				connection.query("select sen_calc.SEN_TIME, sen_calc.SEN_CALC , sen_calc.Units from sen_calc where sen_calc.SEN_TIME like '2015-05-22 12:00:03%' limit 1000", function(query_err, result){
 					connection.release();
 
 					if(query_err){
@@ -59,8 +59,3 @@ var mysql = require('mysql');
 	};
 	
 })();
-	
-
-
-
-

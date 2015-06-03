@@ -4,20 +4,19 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="./view/myStyle.css">
+<link rel="stylesheet" type="text/css" href="./parallax/css/style.css">
 <title> Bear Drone 2015 </title>
 </head>
-<body id="index-body" ng-controller="navbarController"> 
-<div class="page-container"> <!-- whole body div-->
-
-	<div class="banner-wrap">
+<body id="index-body"  ng-controller="navbarController"> 
+<div>
 		<div id="banner">
 
 		</div>
-	</div>
+		
 		<!-- start navbar here -->
 		
 		<div id='nav-wrap' >
-			<nav class="navbar navbar-inverse navbar-fixed-top" >
+			<nav class="navbar navbar-inverse" >
 				<div class=" container-fluid">
 					<div class="collapse navbar-collapse">
 				      <ul class="nav navbar-nav">
@@ -41,15 +40,17 @@
 	   		 	</div>
 			</nav>		
 		</div>
-		<!--    ------------------------             END NAVBAR   -->
-		<div id="main-view">
-			<div ng-view>
-			<!-- different view get injected here -->
-			
+		<!--    	             END NAVBAR   -->
+
+		<div id="main-view" class="parallax-window" data-parallax="scroll" data-image-src="./parallax/images/flowers.jpg">
+
+				<div ng-view>
+					<!-- different view get injected here -->
+					
+				</div>
 			</div>
 		</div>
-	
-	
+		
 </div> <!-- end container div -->
 <!-- ------------------------------------------------FOOTER -->
 <footer>
@@ -63,9 +64,15 @@
 <!--  --------------------------------------------END FOOTER ------------>
 <script type='text/javascript' src='https://code.angularjs.org/1.3.9/angular.min.js'></script>
 <script type='text/javascript' src='https://code.angularjs.org/1.3.9/angular-route.js'></script>
-
 <script type='text/javascript' src='controller/controller.js'></script>
-<script type='text/javascript' src='directives/memberInfo.js'></script>
+
+<!-- jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+
+        <!-- parallex scrolling -->
+<script src="./parallax/scripts/parallax.js"></script>
 </body>
 
 </html>

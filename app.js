@@ -24,8 +24,8 @@ app.get('/temp', function(req, res){
 			// console.log(groupbyUnits.Celsius[i]);
 			var data = {
 				Time: groupbyUnits.Celsius[i].SEN_TIME,
-				Temp: groupbyUnits.Celsius[i].SEN_CALC,
-				Speed: groupbyUnits['Meters per second'][i].SEN_CALC,
+				Temp: groupbyUnits.Celsius[i].SEN_CALC || '0',
+				Speed: groupbyUnits['Miles per Hour'][i].SEN_CALC || '0',
 				Direction: groupbyUnits.degrees[i].SEN_CALC
 			};
 				final_result.push(data);

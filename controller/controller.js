@@ -24,7 +24,7 @@ bdapp.controller('navbarController', ['$scope', '$http', '$interval',function($s
 						url: 'http://directory.tacoma.uw.edu/employee/baiocchi'}];
 
 	$scope.members = [{name: 'Chris Barrett',
-						major: 'CES',
+						major: 'CSS/CES',
 						icon: './pictures/Chris.PNG',
 						linkedin: 'https://www.linkedin.com/in/barrettcm'},
 						{name: 'Eric Yee',

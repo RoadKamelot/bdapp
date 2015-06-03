@@ -23,31 +23,31 @@ var mysql = require('mysql');
 	var pool = mysql.createPool(dbconfig);
 /* query temperature data from db */
 	function temperatureData (callback){
-		callback(null, process.env);
-		// pool.getConnection(function(err, connection){ // where 'sen_time.ID' = 'sen_calc.ID' //'sen_time',
-		// 	console.log('pool connection: '+err);
-		// 	var connectionError = checkSQLConnection(err, connection); //check if there is error in connection to db.
-		// 	if(connectionError){
-		// 		return;
-		// 	}
-		// 	else {
-		// 		//time sort desc, get 20
-		// 		connection.query("select sen_calc.SEN_TIME, sen_calc.SEN_CALC , sen_calc.Units from sen_calc where sen_calc.SEN_TIME like '2015-05-22 12:00:03%' limit 1000", function(query_err, result){
-		// 			connection.release();
+		// callback(null, process.env);
+		pool.getConnection(function(err, connection){ // where 'sen_time.ID' = 'sen_calc.ID' //'sen_time',
+			console.log('pool connection: '+err);
+			var connectionError = checkSQLConnection(err, connection); //check if there is error in connection to db.
+			if(connectionError){
+				return;
+			}
+			else {
+				//time sort desc, get 20
+				connection.query("select sen_calc.SEN_TIME, sen_calc.SEN_CALC , sen_calc.Units from sen_calc where sen_calc.SEN_TIME like '2015-05-22 12:00:03%' limit 1000", function(query_err, result){
+					connection.release();
 
-		// 			if(query_err){
-		// 				console.log(query_err);
-		// 				return callback(query_err, null);
-		// 			}
-		// 			else {
-		// 				console.log(result);
-		// 				return callback(null, result);
-		// 			}
-		// 		});
+					if(query_err){
+						console.log(query_err);
+						return callback(query_err, null);
+					}
+					else {
+						console.log(result);
+						return callback(null, result);
+					}
+				});
 
-		// 	}
+			}
 			
-		// });
+		});
 
 	}
 	

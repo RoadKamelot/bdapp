@@ -12,7 +12,7 @@ bdapp.controller('navbarController', ['$scope', '$http', '$interval',function($s
 			$scope.temp_data = data;
 		}).error(function(data, status, headers, err){
 			console.log(data);
-			console.log(status);
+			console.log('status', status);
 			console.log(headers);
 			console.log(err);
 

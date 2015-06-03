@@ -23,6 +23,7 @@ var mysql = require('mysql');
 	var pool = mysql.createPool(dbconfig);
 /* query temperature data from db */
 	function temperatureData (callback){
+		callback(null, dbconfig);
 		// pool.getConnection(function(err, connection){ // where 'sen_time.ID' = 'sen_calc.ID' //'sen_time',
 		// 	console.log('pool connection: '+err);
 		// 	var connectionError = checkSQLConnection(err, connection); //check if there is error in connection to db.

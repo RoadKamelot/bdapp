@@ -17,6 +17,7 @@ app.get('/', function(req, res) {
 });
 /* Temperature*/
 app.get('/temp', function(req, res){
+	console.log('in here app.js =========================================');
 	dronedbAccessor.temperatureData(function(err, result){
 		var groupbyUnits = _.groupBy(result, 'Units');
 		var final_result = [];

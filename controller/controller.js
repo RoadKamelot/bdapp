@@ -9,7 +9,9 @@ bdapp.controller('navbarController', ['$scope', '$http', '$interval',function($s
 	// },300);
 	$scope.getTemp = function(){
 		$http.get('/temp').success(function(data){	
+			console.log(data);
 			$scope.temp_data = data;
+			console.log("END of success ----------------------");
 		}).error(function(data, status, headers, err){
 			console.log(data);
 			console.log('status', status);

@@ -20,8 +20,8 @@ var mysql = require('mysql');
 
 
 	var pool = mysql.createPool(dbconfig);
-/* query temperature data from db */
-	function temperatureData (callback){
+/* query calculated data from calc_sen table */
+	function calcData (callback){
 		// callback(null, process.env);
 		pool.getConnection(function(err, connection){ // where 'sen_time.ID' = 'sen_calc.ID' //'sen_time',
 			console.log('pool connection: '+err);
@@ -60,7 +60,7 @@ var mysql = require('mysql');
 
 	/** exposes funtions to be used in app.js **/
 	module.exports = {
-		temperatureData: temperatureData,
+		calcData: calcData,
 	};
 	
 })();

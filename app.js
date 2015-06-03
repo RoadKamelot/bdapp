@@ -17,7 +17,7 @@ app.get('/', function(req, res) {
 });
 /* Temperature*/
 app.get('/temp', function(req, res){
-	dronedbAccessor.temperatureData(function(err, result){
+	dronedbAccessor.calcData(function(err, result){
 		// var groupbyUnits = _.groupBy(result, 'Units');
 		// var final_result = [];
 		// for (var i = 0; i < groupbyUnits.degrees.length;i++){

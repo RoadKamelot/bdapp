@@ -32,7 +32,7 @@ app.get('/temp', function(req, res){
 
 		// }
 		// return result ? res.send(final_result):res.send(err);
-		return res.send(err);
+		return res.send(result);
 	});
 });
 

@@ -13,10 +13,10 @@ var mysql = require('mysql');
 		password: process.env.MYSQLCONNSTR_PASSWORD,
 		database: process.env.MYSQLCONNSTR_DB
 	};
-	console.log(dbconfig.host);
-	console.log(dbconfig.user);
-	console.log(dbconfig.password);
-	console.log(dbconfig.database);
+	// console.log(dbconfig.host);
+	// console.log(dbconfig.user);
+	// console.log(dbconfig.password);
+	// console.log(dbconfig.database);
 
 
 	var pool = mysql.createPool(dbconfig);
@@ -30,12 +30,11 @@ var mysql = require('mysql');
 				return;
 			}
 			else {
-				//time sort desc, get 20
 				connection.query("select sen_calc.SEN_TIME, sen_calc.SEN_CALC , sen_calc.Units from sen_calc where sen_calc.SEN_TIME like '2015-05-22 12:00:03%' limit 1000", function(query_err, result){
 					connection.release();
 
 					if(query_err){
-						console.log(query_err);
+						console.log('Something wrong in querying from db',query_err);
 						return callback(query_err, null);
 					}
 					else {

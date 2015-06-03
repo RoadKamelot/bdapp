@@ -74,8 +74,8 @@ filter:alpha(opacity=60); /* For IE8 and earlier */
 	height: 650px;
 
 }
-table{
-	height: 800px;
+#datastream-table{
+	height: 680px;
 }
 #table-body{
 	overflow-y: scroll;

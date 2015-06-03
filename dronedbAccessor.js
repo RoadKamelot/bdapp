@@ -13,11 +13,6 @@ var mysql = require('mysql');
 		password: process.env.MYSQLCONNSTR_PASSWORD,
 		database: process.env.MYSQLCONNSTR_DB
 	};
-	// console.log(dbconfig.host);
-	// console.log(dbconfig.user);
-	// console.log(dbconfig.password);
-	// console.log(dbconfig.database);
-
 
 	var pool = mysql.createPool(dbconfig);
 /* query calculated data from calc_sen table */

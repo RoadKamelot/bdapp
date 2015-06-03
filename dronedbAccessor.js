@@ -8,10 +8,10 @@ var mysql = require('mysql');
 	var dbconfig = {
 		connectionLimit: 100,
 		debug: false,
-		host: process.env.MYSQLCONNSTR_URL,
-		user: process.env.MYSQLCONNSTR_USER,
-		password: process.env.MYSQLCONNSTR_PASSWORD,
-		database: process.env.MYSQLCONNSTR_DB
+		host: process.env.MYSQLCONNSTR_URL || 'us-cdbr-azure-west-b.cleardb.com',
+		user: process.env.MYSQLCONNSTR_USER || 'b58dc498c64f9a',
+		password: process.env.MYSQLCONNSTR_PASSWORD || '7ab3b404',
+		database: process.env.MYSQLCONNSTR_DB || 'dronedb'
 	};
 	// console.log(dbconfig.host);
 	// console.log(dbconfig.user);

@@ -5,7 +5,6 @@
 </head>
 <body>
 	<div class="container container-fluid">
-		
 		<section class="section" ng-repeat="test in tests">
 			<div class="bg-paragraph"><h3>{{test.header}}</h3></div>
 			<div class="bg-paragraph">
@@ -18,9 +17,18 @@
 		</section>
 		<section class="section" ng-repeat="graph in windtunnels">
 			<div class="vid-div"><h4>{{graph.title}}</h4></div>
-			<div class="vid-div"><img class="graph" src='{{graph.graph}}'></div>
+			<div><img class="graph" src='{{graph.graph}}'></div>
 		</section>
-		
+		<section class="section">
+			<div class="bg-paragraph"><h3>Conclusion</h3></div>
+			<div class="container bg-paragraph">
+				<p>
+				Our goal for this project was to prove if it would be possible to collect wind speed and direction from a hovering platform. We were able to prove that the sensor setup that we chose to use would be able to collect this data so long as the wind vane can point in the right direction and the wind speed is greater than 10 mph. This is not to say that there does not exist a possibility where we would be able to get better results than this but it does prove that we can actually get this information.  
+				<br><br>
+				For the most part, we were able to stay on schedule, but there were problems that we were prepared for, but did not necessarily see coming including the process for designing and 3d printing our high risk item. We left ourselves the final three weeks for final report design in the event that we needed to spend more time on testing. We did this due to the unknown date of testing in the Wind Tunnel and we could then move the presentation creation weeks to fit our needs. We however did not have enough time to verify the operation of the sensors and still have time to wait for the wind speed in the local area to be higher than 10 mph. 
+				</p>
+			</div>
+		</section>
 	</div>
 </body>
 </html> 

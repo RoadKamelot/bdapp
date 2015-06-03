@@ -8,10 +8,10 @@ var mysql = require('mysql');
 	var dbconfig = {
 		connectionLimit: 100,
 		debug: false,
-		host: process.env.DB_URL,
-		user: process.env.USER,
-		password: process.env.PASSWORD,
-		database: process.env.DB
+		host: process.env.SQLCONNSTR_host,
+		user: process.env.SQLCONNSTR_username,
+		password: process.env.SQLCONNSTR_password,
+		database: process.env.SQLCONNSTR_db
 	};
 	console.log(dbconfig.host);
 	console.log(dbconfig.user);

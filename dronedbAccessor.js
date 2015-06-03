@@ -8,7 +8,7 @@ var mysql = require('mysql');
 	var dbconfig = {
 		connectionLimit: 100,
 		debug: false,
-		host: process.env.MYSQLCONNSTR_HOST,
+		host: process.env.MYSQLCONNSTR_URL,
 		user: process.env.MYSQLCONNSTR_USER,
 		password: process.env.MYSQLCONNSTR_PASSWORD,
 		database: process.env.MYSQLCONNSTR_DB

@@ -21,7 +21,6 @@ app.get('/temp', function(req, res){
 		var groupbyUnits = _.groupBy(result, 'Units');
 		var final_result = [];
 		for (var i = 0; i < groupbyUnits.degrees.length;i++){
-			// console.log(groupbyUnits.Celsius[i]);
 			var data = {
 				Time: groupbyUnits.Celsius[i].SEN_TIME,
 				Temp: groupbyUnits.Celsius[i].SEN_CALC || '0',

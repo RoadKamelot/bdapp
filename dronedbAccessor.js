@@ -8,9 +8,9 @@ var mysql = require('mysql');
 	var dbconfig = {
 		connectionLimit: 100,
 		debug: false,
-		host: process.env.MYSQLCONNSTR_URL,
-		user: process.env.MYSQLCONNSTR_USER,
-		password: process.env.MYSQLCONNSTR_PASSWORD,
+		host: process.env.MYSQLCONNSTR_URL ,
+		user: process.env.MYSQLCONNSTR_USER ,
+		password: process.env.MYSQLCONNSTR_PASSWORD ,
 		database: process.env.MYSQLCONNSTR_DB
 	};
 
@@ -25,7 +25,8 @@ var mysql = require('mysql');
 				return;
 			}
 			else {
-				connection.query("select sen_calc.SEN_TIME, sen_calc.SEN_CALC , sen_calc.Units from sen_calc where sen_calc.SEN_TIME like '2015-05-22 12:00:03%' limit 1000", function(query_err, result){
+				//select sen_calc.SEN_TIME, sen_calc.SEN_CALC , sen_calc.Units from sen_calc where sen_calc.SEN_TIME like '2015-05-22 12:00:03%' limit 1000
+				connection.query("select sen_calc.sen_calc, sen_time.SEN_TIME, sen_calc.Units from sen_calc, sen_time where sen_calc.time_id = sen_time.id and sen_time.SEN_TIME like '2015-05-22 11:%'' order by sen_time.SEN_TIME asc", function(query_err, result){
 					connection.release();
 
 					if(query_err){
